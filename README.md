@@ -1,4 +1,4 @@
-NoSQL: Social Network API
+# NoSQL: Social Network API
 
 
 
@@ -19,17 +19,17 @@ WHEN I test API POST and DELETE routes in Insomnia
 
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
-### Technologies
+## Technologies
 
-# Javascript 
+#### Javascript 
 
-# JSON
+#### JSON
 
-# Node.js
+#### Node.js
 
-# Insomnia 
+#### Insomnia 
 
-# Postman
+#### Postman
 
 
 ### Models
