@@ -77,28 +77,6 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 ---
 
-**Reaction** (SCHEMA ONLY)
-
-* `reactionId`
-  * Use Mongoose's ObjectId data type
-  * Default value is set to a new ObjectId
-
-* `reactionBody`
-  * String
-  * Required
-  * 280 character maximum
-
-* `username`
-  * String
-  * Required
-
-* `createdAt`
-  * Date
-  * Set default value to the current timestamp
-  * Use a getter method to format the timestamp on query
-
-**Schema Settings**:
-
 
 ### API Routes
 
@@ -110,8 +88,9 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 * `POST` a new user:
 
+#### Example Data
+
 ```json
-// example data
 {
   "username": "lernantino",
   "email": "lernantino@gmail.com"
@@ -122,7 +101,7 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 * `DELETE` to remove user by its `_id`
 
-**BONUS**: Remove a user's associated thoughts when deleted.
+
 
 ---
 
@@ -142,8 +121,10 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 * `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
 
+#### Example Data
+
 ```json
-// example data
+
 {
   "thoughtText": "Here's a cool thought...",
   "username": "lernantino",
