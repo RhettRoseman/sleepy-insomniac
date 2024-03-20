@@ -1,4 +1,4 @@
-# 18 NoSQL: Social Network API
+NoSQL: Social Network API
 
 
 ```md
@@ -14,14 +14,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 
-In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
-
-## Getting Started
-
-Be sure to have MongoDB installed on your machine. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB locally.
-
-Use the following guidelines to set up your models and API routes:
-
 ### Models
 
 **User**:
@@ -36,17 +28,8 @@ Use the following guidelines to set up your models and API routes:
   * String
   * Required
   * Unique
-  * Must match a valid email address (look into Mongoose's matching validation)
-
-* `thoughts`
-  * Array of `_id` values referencing the `Thought` model
-
-* `friends`
-  * Array of `_id` values referencing the `User` model (self-reference)
 
 **Schema Settings**:
-
-Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
 
 ---
 
@@ -55,7 +38,7 @@ Create a virtual called `friendCount` that retrieves the length of the user's `f
 * `thoughtText`
   * String
   * Required
-  * Must be between 1 and 280 characters
+
 
 * `createdAt`
   * Date
@@ -64,7 +47,7 @@ Create a virtual called `friendCount` that retrieves the length of the user's `f
 
 * `username` (The user that created this thought)
   * String
-  * Required
+
 
 * `reactions` (These are like replies)
   * Array of nested documents created with the `reactionSchema`
@@ -97,7 +80,6 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 **Schema Settings**:
 
-This will not be a model, but rather will be used as the `reaction` field's subdocument schema in the `Thought` model.
 
 ### API Routes
 
