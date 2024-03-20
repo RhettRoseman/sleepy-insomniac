@@ -3,6 +3,7 @@
 
 
 GIVEN a social network API
+
 WHEN I enter the command to invoke the application ```npm run start```
 
 THEN my server is started and the Mongoose models are synced to the MongoDB database
